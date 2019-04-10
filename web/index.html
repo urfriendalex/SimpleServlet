@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #formAdd {
+      padding: 8% 33% 0 33%;
+    }
+    #formPost{
+      padding: 15% 33% 0 33%;
+    }
+    body {
+      background: radial-gradient(greenyellow,orangered);
+      background-size: 1920px 1080px;
+      padding: 0;
+      margin: 0;
+    }
+    #header {
+      background-color: black;
+      /*Opacity start*/
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+      filter: alpha(opacity=30);
+      -moz-opacity: 0.30;
+      opacity: 0.3;
+      /*Opacity end*/
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      padding: 0;
+      margin: 0;
+    }
+    #header-content {
+      margin: 20px;
+      font-family: "Futura Std",serif;
+      text-align: center;
+      color: white;
+    }
+    #formPost {display: table; padding-bottom: 0}
+    #formAdd { display: table; padding-bottom: 0}
+    p     { display: table-row;}
+    label { display: table-cell; font-family: "Futura Std", cursive; width: 50%; padding-bottom: 3%}
+    input[type=number] { display: table-cell; width: 300px;}
+    input[type=submit] {
+      width: 300px;
+      text-align: center;
+      margin: 40px 0 0 0 ;
+      background: rgb(255, 255, 255);
+      cursor:pointer;
+      -webkit-border-radius: 10px;
+      font-family: "Futura Std",cursive;
+      font-size: larger;
+      padding: 15px;
+      border: none;
+    }
+    .submission{
+      text-align: center;
+    }
+    input[type=submit]:hover{
+      color: orangered;
+      background: transparent;
+      border: 1px solid white;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Numbers adder</title>
+</head>
+<body>
+<div id="header">
+  <div id="header-content">
+    <h1>Provide your numbers to be added</h1>
+  </div>
+</div>
+<form  action="ADD" method="post">
+  <div id="formPost">
+    <p>
+      <label for="firstNumberPost">First number</label>
+      <input type="number" id="firstNumberPost" name="firstNum" pattern="^[0-9]*$">
+    </p>
+    <p>
+      <label for="secondNumberPost">Second number</label>
+      <input type="number" id="secondNumberPost" name="secondNum" pattern="^[0-9]*$">
+    </p>
+  </div>
+  <section class="submission">
+        <span>
+            <input type="submit" value="Let's add them!">
+        </span>
+  </section>
+</form>
+<form action="ADD" method="get">
+  <div id="formAdd">
+    <p>
+      <label for="firstNumberGet">First number</label>
+      <input type="number" id="firstNumberGet" name="firstNum" pattern="^[0-9]*$">
+    </p>
+    <p>
+      <label for="secondNumberGet">Second number</label>
+      <input type="number" id="secondNumberGet" name="secondNum" pattern="^[0-9]*$">
+    </p>
+  </div>
+  <section class="submission">
+        <span>
+            <input type="submit" value="Let's add them!">
+        </span>
+  </section>
+</form>
+</body>
+</html>
